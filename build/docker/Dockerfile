@@ -1,8 +1,8 @@
 FROM centos:centos7
 
 
-COPY ./blog-backend /blog/backend/bin
-WORKDIR /blog/backend/
+COPY ./blog-backend /home/blog/backend/bin
+WORKDIR /home/blog/backend/
 
 RUN wget https://golang.google.cn/dl/go1.17.13.linux-amd64.tar.gz \
     && rm -rf /usr/local/go \
