@@ -11,7 +11,7 @@ build_binary(){
   go mod tidy
 
   # 编译
-  go build main.go -o $GOPATH/bin/blog-backend
+  go build  -o $GOPATH/bin/blog-backend
   popd
 }
 
