@@ -4,8 +4,8 @@ set -e
 
 build_binary(){
   echo $GOPATH
-  mkdir $GOPATH/bin
-  mkdir $GOPATH/pkg
+  mkdir -p $GOPATH/bin
+  mkdir -p $GOPATH/pkg
   pushd $GOPATH/src/blog-BackEnd
   # 下载好需要的库
   go mod tidy
