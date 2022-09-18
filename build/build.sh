@@ -11,12 +11,13 @@ build_binary(){
   go mod tidy
 
   # 编译
-  go build  -o $GOPATH/bin/blog-backend
+
+  go build -x -o $GOPATH/bin/blog-backend
   popd
 }
 
 build_docker(){
-  docker build -t blog-server:v1.0 ./docker
+  docker build -t blog-server:v1.0 $GOPATH/build/docker/
   docker run blog-server
 }
 
