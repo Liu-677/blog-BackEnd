@@ -18,7 +18,7 @@ build_binary(){
 
 build_docker(){
   docker build -t blog-server:v1.0 $GOPATH/src/blog-BackEnd/build/docker/
-  docker run blog-server
+  docker run blog-server:v1.0
 }
 
 build_binary
