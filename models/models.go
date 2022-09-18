@@ -34,7 +34,6 @@ func init() {
 		password,
 		host,
 		dbName))
-
 	if err != nil {
 		log.Println(err)
 	}
@@ -42,7 +41,7 @@ func init() {
 	gorm.DefaultTableNameHandler = func(db *gorm.DB, defaultTableName string) string {
 		return tablePrefix + defaultTableName
 	}
-
+	db.AutoMigrate(&Article{})
 	db.SingularTable(true)
 	db.LogMode(true)
 	db.DB().SetMaxIdleConns(10)
