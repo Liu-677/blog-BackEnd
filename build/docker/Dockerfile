@@ -1,7 +1,8 @@
 FROM centos:centos7
 
 
-COPY ./blog-backend /home/blog/backend/bin
+COPY ./blog-backend /home/blog/backend/bin/
+COPY ./conf /home/blog/backend/
 WORKDIR /home/blog/backend/
 
 #RUN wget https://golang.google.cn/dl/go1.17.13.linux-amd64.tar.gz \
@@ -16,4 +17,4 @@ WORKDIR /home/blog/backend/
 
 EXPOSE 3000
 
-ENTRYPOINT ['./bin/blog-backend']
+ENTRYPOINT ['/home/blog/backend/bin/blog-backend']
