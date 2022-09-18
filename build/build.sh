@@ -13,12 +13,12 @@ build_binary(){
   # 编译
 
   go build -x -o $GOPATH/src/blog-BackEnd/build/docker/blog-backend
-  cp -r /conf $GOPATH/src/blog-BackEnd/build/docker/
-  popd $GOPATH/src/blog-BackEnd/build/docker/
+  cp -r ./conf $GOPATH/src/blog-BackEnd/build/docker/
+  popd
 }
 
 build_docker(){
-  docker build -t blog-server:v1.0 $GOPATH/src/blog-BackEnd/build/docker/blog-backend
+  docker build -t blog-server:v1.0 $GOPATH/src/blog-BackEnd/build/docker/
   docker run blog-server:v1.0
 }
 

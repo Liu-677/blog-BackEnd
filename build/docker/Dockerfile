@@ -14,7 +14,9 @@ WORKDIR /home/blog/backend/
 #    && export GO111MODULE=on \
 #    && export GOPROXY=https://goproxy.cn,direct \
 #    && mkdir conf
+RUN pwd \
+    && ls conf
 
 EXPOSE 3000
 
-ENTRYPOINT ['/home/blog/backend/bin/blog-backend']
+ENTRYPOINT ["/home/blog/backend/bin/blog-backend"]
