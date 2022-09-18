@@ -12,7 +12,7 @@ build_binary(){
 
   # 编译
 
-  go build -x -o $GOPATH/bin/blog-backend
+  go build -x -o $GOPATH/src/blog-BackEnd/build/docker
   popd
 }
 
