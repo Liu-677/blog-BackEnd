@@ -16,4 +16,4 @@ WORKDIR /home/blog/backend/
 
 EXPOSE 3000
 
-ENTRYPOINT ['./blog-backend']
+ENTRYPOINT ['./bin/blog-backend']
