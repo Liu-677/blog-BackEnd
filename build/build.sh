@@ -16,7 +16,7 @@ build_binary(){
 }
 
 build_docker(){
-  docker build -t blog-server
+  docker build -t blog-server:v1.0 ./docker
   docker run blog-server
 }
 
